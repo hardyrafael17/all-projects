@@ -13,7 +13,6 @@ export class CopyCatContainer extends React.Component {
 		this.handleChange = this.handleChange.bind(this);
   }
 	handleChange(e) {
-		console.log(e.target.value);
 	this.setState(prevProps => {
 		return {
 			copying: prevProps.copying,
