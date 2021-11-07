@@ -1,15 +1,15 @@
 import React from 'react';
-import Transaction from '../transactions/Transactions';
+import { useSelector } from 'react-redux';
+import { selectBudgets } from './budgetsSlice';
+import Budget from '../../components/Budget';
 
-export default function TransactionList({ transactions }) {
+const Transactions = () => {
+  const budgets = useSelector(selectBudgets);
   return (
-    <section className="new-transactions-section">
-      <h2>Transactions</h2>
-      <ul className="new-transaction-list">
-        {transactions.map((t) => (
-          <Transaction transaction={t} key={t.id} />
-        ))}
-      </ul>
-    </section>
+    <ul className='comments-container'>
+      { budgets.map(budget => <Budget budget={budget} key={budget.category}/>) }
+    </ul>
   );
-}
+};
+
+export default Transactions;
