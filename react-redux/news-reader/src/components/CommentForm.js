@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   createCommentIsPending,
+  postCommentForArticleId
 } from '../features/comments/commentsSlice';
 
 export default function CommentForm({ articleId }) {
   const dispatch = useDispatch();
   const [comment, setComment] = useState('');
-  
-  // Declare isCreatePending here.
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    // dispatch your asynchronous action here!
+
+    dispatch(postCommentForArticleId({comment: comment, articleId}))
     setComment('');
   };
 
@@ -29,7 +28,8 @@ export default function CommentForm({ articleId }) {
           type='text'
         />
         <button
-          
+          disabled={useSelector(createCommentIsPending) || comment.length > 5 ? false : true}
+          title={comment.length < 5 ? "Comment should be longer": "submmit"}
           className='comment-button'
         >
           Submit

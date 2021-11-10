@@ -5,6 +5,7 @@ import store from './app/store';
 import { Provider } from 'react-redux';
 
 const { worker } = require('./mocks/browser');
+
 worker.start();
 
 ReactDOM.render(

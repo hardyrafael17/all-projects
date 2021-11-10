@@ -5,10 +5,15 @@ export default function CommentList({ comments }) {
   if (!comments) {
     return null;
   }
-  
   return (
     <ul className='comments-list'>
-      
+      {comments.map(comment => {
+        return (
+          <Comment
+            comment={comment}
+          />
+        )
+      })}
     </ul>
   );
 }
