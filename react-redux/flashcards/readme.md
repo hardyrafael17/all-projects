@@ -1,0 +1,1 @@
+This is a somewhat simple implementation of the read-redux workflow, implementing the redux-toolkit to manage state and demmonstrate it's benefits, if you'd like to see a live version of this 
