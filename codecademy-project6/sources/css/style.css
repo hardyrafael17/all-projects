@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@400;700&display=swap');
+
+
+
+html {
+	font-size: 24px;
+}
+
+body {
+	text-align: center;
+	margin: 5px 0px;
+	color: black;
+	background-color: white;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-weight: bold;
+	font-family: 'Lexend Mega', sans-serif;
+}
+
+h3 {
+	font-weight: normal;
+}
+
+.flex-parent {
+
+	display: flex;
+}
+
+p {
+	font-weight: normal;
+}
+
+ul {
+	margin: auto;
+	width: 80%;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: space-between;
+	margin-bottom: 45px;
+}
+
+li a {
+	color: black
+}
+
+li {
+	list-style: none;
+	color: black;
+}
+
+.banner {
+	min-height: 300px;
+	max-height: 300px;
+	flex-flow: column nowrap;
+	background-image: url("../images/skyscrapers.jpg");
+	background-size: cover;
+	justify-content: center;
+	background-attachment: fixed;
+	margin: 30px auto;
+}
+
+.banner h3,
+.banner h2 {
+	background-color: white;
+	padding: 10px;
+	margin: 0;
+	line-height: 1;
+}
+
+body h2 {
+	margin-top: 60px;
+}
+
+section.portfolio {
+	flex-flow: row wrap;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+section.portfolio div {
+	width: 470px;
+	height: 154px;
+	display: flex;
+	align-items: center;
+	justify-items: center;
+	justify-content: space-between;
+}
+section.portfolio div p {
+	margin: auto;
+}
+
+section.portfolio div img {
+	width: 200px;
+	height: 133px;
+	padding: 10px;
+}
+
+.employees {
+	background-image: url(../images/blurred-road.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	flex-flow: row wrap;
+	color: white;
+	align-content: center;
+	justify-content: center;
+	padding-top: 10px;
+
+}
+
+.employees div {
+	width: 300px;
+	height: 486px;
+	padding: 10px;
+	margin-bottom: 15px	;
+}
+
+
+.employees div img  {
+	width: 200px;
+	height: 300px;
+}
